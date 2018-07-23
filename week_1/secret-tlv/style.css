@@ -1,0 +1,32 @@
+body {
+    background-image: url("https://media.giphy.com/media/vUnF0lCAxNS4E/giphy.gif");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h2 {
+   color: coral;
+   display: inline; 
+}
+.picture {
+    height: 200px;
+    width: 260px;
+}
+.whitetext {
+    color: red;
+    text-shadow: 10px;
+}
+#koalatree {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 20%;
+    height: auto;    
+}
