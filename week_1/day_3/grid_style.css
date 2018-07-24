@@ -1,0 +1,72 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: (6, 1fr);
+    grid-template-rows: (5, 1fr);
+    grid-template-areas: 
+    "s s f f h h"
+    "s s f f h h"
+    "s s f f . ."
+    "s s f f m m"
+    "s s f f m m";
+    grid-gap: 10px;
+}
+.header {
+    grid-area: h;
+    background-color: aqua
+}
+.footer {
+    grid-area: f;
+    background-color: white;
+    display: grid;
+    grid-template-columns: (6, 1fr);
+    grid-template-rows: (6, 1fr);
+    grid-template-areas: 
+    ". . b b . ."
+    ". . b b . ."
+    ". . g g . ."
+    ". . g g . ."
+    ". . g g . ."
+    ". . g g . ."
+}
+.sidebar {
+    grid-area: s;
+    background-color: white;
+    display: grid;
+    grid-template-columns: (6, 1fr);
+    grid-template-rows: (3, 1fr);
+    grid-template-areas: 
+    "n n . . j j"
+    "n n . . j j"
+    "n n i i j j"
+    "n n i i j j"
+    "n n . . j j"
+    "n n . . j j"
+}
+.content {
+    grid-area: m;
+    background-color: fuchsia
+}
+.nested {
+    background-color: darkolivegreen
+}
+#sideGrid1 {
+    grid-area: n
+}
+#sideGrid2 {
+    grid-area: i
+}
+#sideGrid3 {
+    grid-area: j
+}
+#sideGrid4 {
+    grid-area: b;
+    border-radius: 100%
+}
+#sideGrid5 {
+    grid-area: g
+}
+img {
+    width: 203px;
+    position: absolute;
+}

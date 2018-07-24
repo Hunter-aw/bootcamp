@@ -1,0 +1,163 @@
+h1 {
+    text-align: center;
+    color: white;
+    position: absolute
+}
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: (3, 1fr);
+    grid-template-rows: (4, 1fr);
+    grid-template-areas: 
+    "s s s s"
+    "l p f r"
+    "g g g g";
+    /* grid-gap: 10px; */
+}
+.sky {
+    grid-area: s;
+    background-color: rgb(7, 7, 49);
+    /* add stars */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    ". . . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+    ". . . . o . . . . . . ."
+} 
+#head {
+    grid-area: o;
+    border-radius: 100%
+}
+.background{
+    background-color: rgb(9, 9, 71)
+}
+.left {
+    grid-area: l;
+}
+.right {
+    grid-area: r;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    ". ."
+    ". ."
+    ". ."
+    "h h" ;
+}
+/* Person Grid */
+.person {
+    grid-area: p;
+    display: grid;
+    grid-template-columns: repeat (7, 1fr);
+    grid-template-rows: repeat (4, 1fr);
+    grid-template-areas: 
+    "z z b b b x x"
+    ". . b b b . ."
+    ". . b b b . ."
+    ". . l . j . ."
+    ". . l . j . ."
+}
+.human {
+    background-color: white;
+}
+#body {
+    grid-area: b;
+}
+#arm1 {
+    grid-area: z;
+}
+#arm2 {
+    grid-area: x;
+}
+#leg1 {
+    grid-area: l;
+    grid-column-gap: 30px
+}
+#leg2 {
+    grid-area: j;
+}
+/* Flag Grid */
+.flag{
+    grid-area: f;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: 
+    "r q q s s"
+    "r w w s s"
+    "r e e e e"
+    "r a a a a"
+    "r i i i i"
+    "r . . . ."
+    "r . . . ."
+    "r . . . ."
+    "r . . . ."
+}
+
+#rod {
+    grid-area: r;
+    background-color: brown;
+}
+.red{
+    background-color: red
+}
+.white{
+    background-color: white
+}
+#stars{
+    grid-area: s;
+    background-color: blue
+}
+#stripe1 {
+    grid-area: q
+}
+#stripe2 {
+    grid-area: w
+}
+#stripe3 {
+    grid-area: e
+}
+#stripe4 {
+    grid-area: a
+}
+#stripe5 {
+    grid-area: i
+}
+/* Ground grid */
+.ground {
+    grid-area: g;
+    background-color: rgba(95, 89, 89, 0.151);
+    display: grid;
+    grid-template-columns: (10, 1fr);
+    grid-template-rows: (3, 1fr);
+    grid-template-areas: 
+    "c c . . . . . . . ."
+    "c c r r r r r r r r"
+    ". . r r r r r r r r";
+    /* grid-gap: 10px; */
+}
+#hill {
+    grid-area: h;
+    border-radius: 150% 40% 0 0;
+    background-color: rgba(180, 166, 166, 0.74)
+}
+#crater {
+    grid-area: c;
+    border-radius: 0 0 100% 0%;
+    background-color: rgba(99, 93, 93, 0.671)
+}
+#regular {
+    grid-area: r;   
+}
+
+/* .header {
+    grid-area: h;
+    background-color: aqua
+}
+#sideGrid4 {
+    grid-area: b;
+    border-radius: 100%
+} */
