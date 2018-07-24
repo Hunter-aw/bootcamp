@@ -1,7 +1,7 @@
 h1 {
     text-align: center;
     color: white;
-    position: absolute
+    position: absolute;
 }
 .container {
     height: 100vh;
@@ -86,8 +86,8 @@ h1 {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(9, 1fr);
     grid-template-areas: 
-    "r q q s s"
-    "r w w s s"
+    "r s s q q"
+    "r s s w w"
     "r e e e e"
     "r a a a a"
     "r i i i i"
