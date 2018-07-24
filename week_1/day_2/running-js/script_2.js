@@ -51,6 +51,7 @@ console.log(string)
 
 //Partner exercise 4
 
+/*
 let string = "0254687193";
 let newString = "";
 let n = -1
@@ -63,3 +64,10 @@ for (number of string) {
     }
 }
 console.log(newString)
+*/
+
+//Extension Exercise 1
+
+const array = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+
+// for (string in array)

@@ -1,0 +1,55 @@
+#test {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    /* padding: 10px; */
+    /* margin-top: 100px; */
+    /* position: relative; */
+    /* display: inline-block; */
+    position: relative;
+    /* margin: 20; */
+}
+.child {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin: 0;
+}
+#newTest {
+    padding: 0;
+    background-color: blue;
+    /* padding-right: 100px; */
+    /* padding: 500px; */
+    /* top: 300px; */
+    /* left: 300px; */
+    right: 0;
+    margin: 0;
+}
+#testChild {
+    background-color: green;
+    /* margin: 200px; */
+
+}
+#testChild2 {
+    background-color: yellow;
+    bottom: 0;
+    left: 0;
+}
+#testChild3 {
+    background-color: purple;
+    bottom: 0;
+    right: 0;
+}
+#grandChild {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 0;
+    background-color: azure;
+}
+#testChild4 {
+    background-color: aliceblue;
+    right: 33%;
+    top: 33%;
+    position: absolute;
+}
