@@ -7,8 +7,8 @@ var reservations = {
   }
 }
 
-var isName = prompt('Please enter the name for your reservation');
-let name =  new RegExp(isName, "i");
+var name = prompt('Please enter the name for your reservation');
+// let name =  new RegExp(isName, "i");
 
 var claimReservation = function () {  
   if ((reservations[name]) && (reservations[name].claimed) === false) {
