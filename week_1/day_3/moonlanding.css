@@ -3,6 +3,10 @@ h1 {
     color: white;
     position: absolute;
 }
+img {
+    width: 149px;
+    position: absolute;
+}
 .container {
     height: 100vh;
     display: grid;
