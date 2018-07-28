@@ -2,14 +2,15 @@ form {
     height: 15vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: (3, 1fr);
+    grid-template-rows: (4, 1fr);
     grid-template-areas: 
     "ut . u"
     "pt . p"
+    "r . ."
     "l . .";
     grid-gap: 10px; 
     position: relative;
-    width: 25%;
+    width: 27%;
 }
 #login{
     grid-area: l;
@@ -25,4 +26,8 @@ form {
 }
 #passText{
     grid-area: pt;
+}
+#remember{
+    grid-area: r;
+    height: 70%;
 }
