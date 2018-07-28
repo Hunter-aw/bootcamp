@@ -1,24 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather'); 
+
 body{
     background-color: lightgray;
-    font-family: Helvetica, Arial, sans-serif
+    font-family: Helvetica, Arial, sans-serif;
+    padding-top: 60px;
 }
 
 .container {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 6fr;
+    grid-template-columns: 1fr 1fr 5fr 1fr;
     grid-template-rows: (4, 1fr);
     grid-template-areas: 
     "n n n n"
     ". h h ."
-    "c c c c";
+    "c c c c"
+    "e e e e";
     grid-gap: 10px; 
+    position: relative
 }
 
 nav {
     background-color: darkslategray;
     position: fixed;
     width: 100%;
+    max-height: 60px;
     height: auto;
     top: 0;
     grid-area: n;
@@ -28,11 +34,14 @@ nav {
 li {
     display: inline-block;
     padding-inline-start: 15%;
-    color: lightgray;
     font-size: 120%
 }
-li:hover {
+li a{
+    color: lightgray;
+}
+li a:hover {
     color: rgb(221, 65, 65);
+    text-decoration: none;
 }
 .heading img {
     width: 45%;
@@ -59,13 +68,37 @@ li:hover {
     height: 100%
 
 }
-.column #random{
-    width: 30%;
+.column#random{
+    width: 40%;
+    
 }
-.column #bars{
-    width: 70%
+.column#bars{
+    width: 60%
 }
-.column #bars img {
-    width: 100%;
+#random h2{
+    font-family: 'Merriweather', serif;
+}
+.column#bars img {
+    width: 95%;
     height: auto
+}
+.extraPic{
+    grid-area: e;
+    background-image: url("https://static.timesofisrael.com/www/uploads/2015/05/F141210MD17-e1431441985279-640x400.jpg");
+    height: 100%;
+    padding: 5em
+}
+
+@media (max-width: 700px) {
+    .column#bars {
+        width: 100%;
+        float: none;
+        height: auto
+    };
+    .column#random{
+        width: 100%;
+        float: none;
+        /* border-left: 1px groove darkslategray; */
+        font-size: 2em
+    };
 }
