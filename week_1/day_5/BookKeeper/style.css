@@ -1,0 +1,28 @@
+form {
+    height: 15vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: (3, 1fr);
+    grid-template-areas: 
+    "ut . u"
+    "pt . p"
+    "l . .";
+    grid-gap: 10px; 
+    position: relative;
+    width: 25%;
+}
+#login{
+    grid-area: l;
+}
+#pass{
+    grid-area: p;
+}
+#user{
+    grid-area: u;
+}
+#userText{
+    grid-area: ut;
+}
+#passText{
+    grid-area: pt;
+}
