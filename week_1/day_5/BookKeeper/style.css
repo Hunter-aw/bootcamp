@@ -1,4 +1,12 @@
-form {
+input:invalid{
+    border: 2px dashed red;
+}
+
+input:valid{
+    border: 2px solid black;
+}
+
+.signIn {
     height: 15vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -30,4 +38,63 @@ form {
 #remember{
     grid-area: r;
     height: 70%;
+}
+.signUpForm{
+    height: 40vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: 
+    "ui . nu"
+    "ei . em"
+    "pi . np"
+    "ri . pr"
+    "ti . tp"
+    "ci . ct"
+    "sb . .";
+    grid-gap: 20px;
+    width: 30%;
+    position: relative;
+    /* width: 100%; */
+    /* display: block */
+}
+#newUser{
+    grid-area: nu;
+    /* width: 30% */
+}
+#newPass{
+    grid-area: np;
+}
+#newEmail{
+    grid-area: em;
+}
+#passRepeat{
+    grid-area: pr;
+}
+#newNumber{
+    grid-area: tp;
+}
+#countryLists{
+    grid-area: ct;
+}
+#userInput{
+    grid-area: ui;
+}
+#emailInput{
+    grid-area: ei;
+}
+#passInput{
+    grid-area: pi;
+}
+#repeatInput{
+    grid-area: ri;
+}
+#telephoneInput{
+    grid-area: ti;
+}
+#countryInput{
+    grid-area: ci;
+}
+#submitButton{
+    grid-area: sb
 }

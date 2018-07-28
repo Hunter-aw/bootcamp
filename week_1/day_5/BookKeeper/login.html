@@ -11,10 +11,14 @@
 </head>
 
 <body>
-    <form action="">
-        <span id="userText">Username: </span><input id = "user" type="text" /><br>
-        <span id="passText">Password: </span><input id = "pass" type="password"><br>
-        <input type="checkbox" name="Remember me" id="remember"/>Remember me<br>
-        <button id = "login" type="button">Login</button>
-    </form>
+    <h1>Welcome Back, Sign in Below</h1>
+    <div class="signIn">
+        <form action="">
+            <span id="userText">Username: </span><input id = "user" type="text" required/><br>
+            <span id="passText">Password: </span><input id = "pass" type="password" required/><br>
+            <input type="checkbox" name="Remember me" id="remember"/>Remember me<br>
+            <input id = "login" type="submit" value="Login"></button>
+            <!-- <input type="submit" value="submit"> -->
+        </form>
+    </div>
 </body>
