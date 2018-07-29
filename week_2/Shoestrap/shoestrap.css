@@ -61,10 +61,20 @@ div {
     clear: both;
 }
 .navbar {
-    
+    float: top;
+    position: fixed;
+    background-color: slategray;
+    width: 100%
 }
-
-
+.navbar li {
+    color: seashell;
+    padding: 10%;
+    width: 10%;
+    display: inline;
+}
+.navbar li:hover {
+    color: red
+}
 
 * {
     -webkit-box-sizing: border-box;
