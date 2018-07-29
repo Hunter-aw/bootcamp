@@ -1,3 +1,9 @@
+body {
+    margin: 10px
+}
+.container {
+    position: relative
+}
 .col-1 {
     float: left;
     width: 8.3333333333%;
@@ -47,10 +53,13 @@
     width: 100%;
 }
 
-div {
-    height: 50px;
-    border: 1px solid red;
-}
+/* div {
+    /* height: 50px; */
+    /* border: 1px solid red;
+} */ */
+/* .heading{
+    padding-top: 7%
+} */
 .row:before {
     display: table;
     content: "";
@@ -63,17 +72,79 @@ div {
 .navbar {
     float: top;
     position: fixed;
-    background-color: slategray;
-    width: 100%
+    background-color: rgb(235, 232, 230);
+    width: 99%;
+    height: 7%;
+    display: inline-table;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    z-index: 50;
+    overflow: hidden;
+
 }
-.navbar li {
-    color: seashell;
-    padding: 10%;
-    width: 10%;
-    display: inline;
+.navbar-text{
+    color: slategray;
+    /* width: 20%; */
+    flex-wrap: wrap;
+    display: inline-block;
+    /* padding-top: .5rem; */
+    padding-bottom: .5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 120%
 }
-.navbar li:hover {
-    color: red
+.navbar-text:hover {
+    background-color: lightgrey
+}
+#nav-img{
+    width: 20%;
+    height: auto;
+}
+.button-text {
+    border: 1px solid orangered;
+    font-variant-caps: all-small-caps;
+    color: orangered
+}
+.heading {
+    position: relative
+}
+.background-img{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    position: relative;
+    z-index: 10;
+    object-fit: fill
+}
+.in-line-img{
+    /* position: absolute;
+    top: 40%;
+    margin-left: 40%; */
+    /* display: inline; */
+    /* font-weight: 200; */
+    position: absolute;
+    top: 42%;
+    margin-left: 38%;
+    z-index: 20;
+}
+.in-line-text{
+    /* margin: 0 auto; */
+    color: gray;
+    font-weight: 100;
+    position: inline-block;
+    font-size: 200%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 38%
+}
+.in-line-paragraph{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: inline-block;
+    margin-left: 20%;
+    font-weight: 80;
+    font-size: 110%
 }
 
 * {
