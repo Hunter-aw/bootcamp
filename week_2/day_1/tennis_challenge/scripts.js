@@ -1,42 +1,73 @@
-let newPoint = prompt("Who just scored?")
+let scorer = prompt("Who just scored?")
 
-let ifScore = function() {
-    if (this.score < 30) {
-        this.score += 15;
-        return;
-    } else if (this.score < 40) {
-        this.score+=10;
-        return;
-}
+const Hunter = {
+    name: "Hunter",
+    score: 0,
+    point: scorePoint()
+
+};
+const Jona = {
+    name: "Jona",
+    score: 0,
+    point: scorePoint()
+
+};
+
+function alertScore() {
+    alert(`The current score is Hunter ${Hunter.score}, Jona ${Jona.score}`)
 }
 
-let ifDeuce = function() {
-    if ((hunter.score === 40) && (jona.score === 40)) {
-        hunter.score = "Deuce!"
-        jona.score = "Deuce!"
+function checkDeuce() {
+    if ((Hunter.score === 40) && (Jona.score === 40)) {
+        Hunter.score = "Deuce!"
+        Jona.score = "Deuce!"
         return;
     } 
 }
 
-let playDeuce = function() {
-    if (ifDeuce) {
-        if(newPoint) {
-            newPoint.score = "Advantage!"
+function playDeuce() {
+        scorer.score = "Advantage!";
+        scorer();
+        if (scorer.score === "Advantage") {
+            scorer.score === "Winner!"
+        } else {
+            Hunter.score = "Deuce!"
+            Jona.score = "Deuce!"
+            return;
         }
-}
-}
+        return;
+    }
 
-const hunter ={
-    name: "Hunter",
-    score: 0,
-    // ifScore:
-
+function scorePoint (scorer) {
+    if (this.score < 30) {
+        this.score += 15
+        return;
+    } else if (this.score < 40) {
+        this.score += 10
+        return;
+    } else if (checkDeuce()) {
+        playDuece()
+    }else this.score = "Winner!"
+    return;
 };
-const jona ={
-    name: "Jona",
-    score: 0,
-    // ifScore:
 
-};
+function checkWin(scorer) {
+    if ((Jona.score === "Winner!") || (Hunter.score === "Winner!")) {
+        alert(`We have a winner! Congratulations ${scorer}`)
+    } else {return;}
 
-newPoint();
+}
+
+function playTennis() {
+    scorer;
+    alertScore();
+    while (!checkWin()) {
+        scorer.point();
+        checkWin();
+        alertScore();
+    }
+    return;
+}
+
+
+playTennis();
