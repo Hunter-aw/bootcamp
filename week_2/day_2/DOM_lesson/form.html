@@ -57,11 +57,24 @@
     var phoneConfirmText = document.createTextNode("That's a few digits to many mate, keep it below 15")
     
 
+    // function runAllErrors() {
+    //     While (!submitForm()) {
+    //         submitForm()
+    //     }
+    // }
+
     function submitForm() {
-        debugger;
-        let user
-        let pass
-        let confirmPass
+        // debugger;
+        // let user = document.getElementById("username").value
+        // let pass = document.getElementById("pass").value
+        // let confirmPass = document.getElementById("confirmPass").value
+        // let country = document.getElementById("country").value
+
+        userValidate()
+        passValidate()
+        passConfirm()
+        countryValidate()
+        phoneNumberValidate()
         if(userValidate() && passValidate() && passConfirm() && countryValidate() && phoneNumberValidate()) {
             let name = document.getElementById("username").value
             // var attr = document.createAttribute("class");
@@ -69,6 +82,7 @@
             errorList.style.color = "green";
             errorList.innerHTML = `Thank you and welcome ${name}, It's out pleasure to rock your freaking world`
         } else {
+            return false
         }
     }
     
@@ -77,9 +91,10 @@
         if (user.length < 5) {
             newUserError.appendChild(newUserText)
             errorList.appendChild(newUserError)
+            newUserError.style.display = "block";
             return false;
         } else {
-            errorList.innerHTML = ""
+            newUserError.style.display = "none";
             return true;
             
         }
@@ -89,9 +104,10 @@
         if (pass.length < 6) {
             newPassError.appendChild(newPassText)
             errorList.appendChild(newPassError)
+            newPassError.style.display = "block";
             return false;
         } else {
-            errorList.innerHTML = ""
+            newPassError.style.display = "none";
             return true;
         }
     }
@@ -101,9 +117,10 @@
         if (pass !== confirmPass) {
             confirmPassError.appendChild(passConfirmText)
             errorList.appendChild(confirmPassError)
+            confirmPassError.style.display = "block";
             return false;
         } else {
-            errorList.innerHTML = ""
+            confirmPassError.style.display = "none";
             return true;
         }
     }
@@ -113,9 +130,10 @@
         if ((country !== "USA") && (country !== "Israel")) {
             confirmCountryError.appendChild(countryConfirmText)
             errorList.appendChild(confirmCountryError)
+            confirmCountryError.style.display = "block";
             return false;
         } else {
-            errorList.innerHTML = ""
+            confirmCountryError.style.display = "none";
             return true;
         }
     }
@@ -124,9 +142,10 @@
         if (phoneNumber.toString().length > 15) {
             confirmPhoneError.appendChild(phoneConfirmText)
             errorList.appendChild(confirmPhoneError)
+            confirmPhoneError.style.display = "block";
             return false;
         } else {
-            errorList.innerHTML = ""
+            confirmPhoneError.style.display = "none";
             return true;
         }
     }
