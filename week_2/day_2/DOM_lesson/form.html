@@ -26,34 +26,108 @@
     <br>
     <button id= "submit" type="button" onclick="submitForm();">Submit</button>
 </form>
+<ul id="errorList">
+
+</ul>
+<style>
+    #errorList {
+        color: red;
+    }
+    .green {
+        color: green
+    }
+</style>
 <script text="text/javascript">
     var submitButton = document.getElementById("submit")
     let user = document.getElementById("username").value
     let pass = document.getElementById("pass")
+    let confirmPass = document.getElementById("confirmPass").value
     var form = document.getElementById("form")
-    var newPara = document.createElement("p")
-    var newParaText = document.createTextNode("Don't be short with me. Try again, with more than 5 characters, amature.")
+    var errorList = document.getElementById("errorList")
+    var newUserError = document.createElement("li")
+    var newPassError = document.createElement("li")
+    var confirmPassError = document.createElement("li")
+    var confirmCountryError = document.createElement("li")
+    var confirmPhoneError = document.createElement("li")
+    var addBreak = document.createElement("br")
+    var newUserText = document.createTextNode("Don't be short with me. Try again, with more than 5 characters, amature.")
+    var newPassText = document.createTextNode("Please use more than 6 characters in your password")
+    var passConfirmText = document.createTextNode("Your passwords do not match, please try again, goodbye.")
+    var countryConfirmText = document.createTextNode("You don't seem to be from America or Little America, shame on you")
+    var phoneConfirmText = document.createTextNode("That's a few digits to many mate, keep it below 15")
+    
+
     function submitForm() {
-        userValidate();
-        passValidate();
+        debugger;
+        let user
+        let pass
+        let confirmPass
+        if(userValidate() && passValidate() && passConfirm() && countryValidate() && phoneNumberValidate()) {
+            let name = document.getElementById("username").value
+            // var attr = document.createAttribute("class");
+            // attr.value = "green";
+            errorList.style.color = "green";
+            errorList.innerHTML = `Thank you and welcome ${name}, It's out pleasure to rock your freaking world`
+        } else {
+        }
     }
     
     function userValidate() {
         let user = document.getElementById("username").value
         if (user.length < 5) {
-            newPara.appendChild(newParaText)
-            form.appendChild(newPara)
+            newUserError.appendChild(newUserText)
+            errorList.appendChild(newUserError)
+            return false;
         } else {
-            alert("Thanks so much for signing up for the Art of Passive Agression Newsletter, I mean, it's fine.")
+            errorList.innerHTML = ""
+            return true;
+            
         }
     }
     function passValidate() {
-        let user = document.getElementById("username").value
-        if (user.length < 5) {
-            newPara.appendChild(newParaText)
-            form.appendChild(newPara)
+        let pass = document.getElementById("pass").value
+        if (pass.length < 6) {
+            newPassError.appendChild(newPassText)
+            errorList.appendChild(newPassError)
+            return false;
         } else {
-            alert("Thanks so much for signing up for the Art of Passive Agression Newsletter, I mean, it's fine.")
+            errorList.innerHTML = ""
+            return true;
+        }
+    }
+    function passConfirm() {
+        let pass = document.getElementById("pass").value
+        let confirmPass = document.getElementById("confirmPass").value
+        if (pass !== confirmPass) {
+            confirmPassError.appendChild(passConfirmText)
+            errorList.appendChild(confirmPassError)
+            return false;
+        } else {
+            errorList.innerHTML = ""
+            return true;
+        }
+    }
+    function countryValidate() {
+        // debugger;
+        let country = document.getElementById("country").value
+        if ((country !== "USA") && (country !== "Israel")) {
+            confirmCountryError.appendChild(countryConfirmText)
+            errorList.appendChild(confirmCountryError)
+            return false;
+        } else {
+            errorList.innerHTML = ""
+            return true;
+        }
+    }
+    function phoneNumberValidate() {
+        let phoneNumber = document.getElementById("phone").value
+        if (phoneNumber.toString().length > 15) {
+            confirmPhoneError.appendChild(phoneConfirmText)
+            errorList.appendChild(confirmPhoneError)
+            return false;
+        } else {
+            errorList.innerHTML = ""
+            return true;
         }
     }
 
