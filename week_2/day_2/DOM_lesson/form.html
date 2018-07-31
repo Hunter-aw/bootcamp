@@ -10,22 +10,53 @@
 <body>
     
 
-<form>
+<form id = "form">
     Username:
-    <input type="text" placeholder="Your Name">
+    <input id = "username" type="text" placeholder="Your Name" minlength="5">
     <br> Email:
     <input type="e-mail" placeholder="yourname@email.com">
     <br> Password:
-    <input type="password">
+    <input id = "pass" type="password">
     <br> Repeat password:
-    <input type="password">
+    <input id = "confirmPass" type="password">
     <br> Phone Number:
-    <input type="number">
+    <input id="phone" type="number">
     <br> Country:
-    <input type="text">
+    <input id= "country" type="text">
     <br>
-    <button type="button">Submit</button>
+    <button id= "submit" type="button" onclick="submitForm();">Submit</button>
 </form>
+<script text="text/javascript">
+    var submitButton = document.getElementById("submit")
+    let user = document.getElementById("username").value
+    let pass = document.getElementById("pass")
+    var form = document.getElementById("form")
+    var newPara = document.createElement("p")
+    var newParaText = document.createTextNode("Don't be short with me. Try again, with more than 5 characters, amature.")
+    function submitForm() {
+        userValidate();
+        passValidate();
+    }
+    
+    function userValidate() {
+        let user = document.getElementById("username").value
+        if (user.length < 5) {
+            newPara.appendChild(newParaText)
+            form.appendChild(newPara)
+        } else {
+            alert("Thanks so much for signing up for the Art of Passive Agression Newsletter, I mean, it's fine.")
+        }
+    }
+    function passValidate() {
+        let user = document.getElementById("username").value
+        if (user.length < 5) {
+            newPara.appendChild(newParaText)
+            form.appendChild(newPara)
+        } else {
+            alert("Thanks so much for signing up for the Art of Passive Agression Newsletter, I mean, it's fine.")
+        }
+    }
 
+</script>
 </body>
 </html>
