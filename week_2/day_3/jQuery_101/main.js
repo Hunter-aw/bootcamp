@@ -5,15 +5,18 @@ $('ul li:nth-child(2)').css('color', 'pink')
 $('#brown-div').css('color', 'brown')
 
 
-var clicked = function() {
-    var myInput = $('#my-input').val()
-    var newInput = $('.students').append('<li>' + myInput + '</li>')
-    newInput
-    newInput.bind() //I tried to add the .bind to no avail, leaving for now
-}
-$('button').click(clicked)
-
 var removeLi = function () {
     $(this).remove()
 }
+
+var clicked = function() {
+    var myInput = $('#my-input').val()
+    var newLi = $('<li>')
+    newLi.text(myInput)
+    newLi.click(removeLi)
+    var newInput = $('.students').append(newLi)
+    // newInput.bind() //I tried to add the .bind to no avail, leaving for now
+}
+$('button').click(clicked)
+
 $('li').click(removeLi);
