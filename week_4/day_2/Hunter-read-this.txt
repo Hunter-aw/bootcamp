@@ -1,0 +1,2 @@
+Hey, you needed to install npm and the bootcamp repo doesn't work great for that since it's all gonna end up as one project.
+So you put this under bootcamp projects. Yes I know it's annoying. Alas, what can you do.
