@@ -1,0 +1,22 @@
+{
+  "name": "bootcamp",
+  "version": "1.0.0",
+  "description": "If not seen as a separate respository, all bootcamp porjects can be found here.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunter-aw/bootcamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hunter-aw/bootcamp/issues"
+  },
+  "homepage": "https://github.com/hunter-aw/bootcamp#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
