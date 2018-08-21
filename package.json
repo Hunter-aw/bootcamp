@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/hunter-aw/bootcamp#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "@types/request": "^2.47.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "request": "^2.88.0"
   }
 }
