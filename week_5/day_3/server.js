@@ -16,7 +16,8 @@ app.use('/', query)
 request('http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=c6320192c1fe5796cee67590a23adc57', function (error, response, weather) {
   if (!error && response.statusCode == 200) {
     // let units = weather.query.units
-    console.log((weather)) // Shows the HTML for the EA homepage. 
+    let xxx = JSON.parse(weather)
+    console.log(xxx.main.temp) // Shows the HTML for the EA homepage. 
   } else {
       console.log(error)
   }
